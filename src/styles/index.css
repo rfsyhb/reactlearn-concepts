@@ -8,10 +8,30 @@
   background-color: #191815;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
 body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  padding-top: 1em;
 }
