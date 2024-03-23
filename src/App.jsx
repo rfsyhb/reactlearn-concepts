@@ -2,6 +2,7 @@ import React from 'react';
 import './styles/App.css';
 import getInitialData from './utils/index';
 import ContainerData from './concepts/destructuring/ContainerData';
+import DataSearch from './concepts/search/DataSearch';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,6 +19,9 @@ class App extends React.Component {
         <div className='container'>
           {this.state.person
             .map((data, index) => <ContainerData key={index} {...data} />)}
+        </div>
+        <div>
+          <DataSearch />
         </div>
       </>
     );
