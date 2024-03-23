@@ -3,6 +3,7 @@ import '../styles/App.css';
 import getInitialData from '../utils/index';
 import ContainerData from './destructuring/ContainerData';
 import DataSearch from './search/DataSearch';
+import PersonInputContainer from './input/PersonInputContainer';
 
 class DestructSearchApp extends React.Component {
   constructor(props) {
@@ -20,6 +21,26 @@ class DestructSearchApp extends React.Component {
     });
   }
 
+  // destructure dari file PersonInputContainer
+  // konteks: this.props.addPerson(this.state)
+  // this.state file childnya ada name, age, dan email
+  // setState bersifat asinkron! makanya memakai prevState
+  onSubmitAddPersonHandler = ({ name, age, email }) => {
+    this.setState((prevState) => {
+      return {      
+        person: [
+          ...prevState.person,
+          {
+            id: Number(new Date()),
+            name,
+            age,
+            email,
+          },
+        ]
+      }
+    })
+  }
+
   render() {
     return (
       <>
@@ -34,6 +55,9 @@ class DestructSearchApp extends React.Component {
         </div>
         <div>
           <DataSearch onSearch={this.onSubmitSearchHandler} />
+        </div>
+        <div>
+          <PersonInputContainer addPerson={this.onSubmitAddPersonHandler}/>
         </div>
       </>
     );
