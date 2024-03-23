@@ -1,10 +1,10 @@
 import React from 'react';
-import './styles/App.css';
-import getInitialData from './utils/index';
-import ContainerData from './concepts/destructuring/ContainerData';
-import DataSearch from './concepts/search/DataSearch';
+import '../styles/App.css';
+import getInitialData from '../utils/index';
+import ContainerData from './destructuring/ContainerData';
+import DataSearch from './search/DataSearch';
 
-class App extends React.Component {
+class DestructSearchApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,4 +40,4 @@ class App extends React.Component {
   }
 }
 
-export default App
+export default DestructSearchApp;
