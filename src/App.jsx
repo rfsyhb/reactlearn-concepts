@@ -23,13 +23,17 @@ class App extends React.Component {
   render() {
     return (
       <>
+        {/* {this.state.person.filter(data => console.log(data.name.toLowerCase()))} */}
         <h1>Reactlearn</h1>
         <div className='container'>
           {this.state.person
-            .map((data, index) => <ContainerData key={index} {...data} />)}
+            .filter(dataPerson => dataPerson.name.toLowerCase().includes(this.state.search.toLowerCase().trim()))
+            .map((dataPerson, index) => (
+              <ContainerData key={index} {...dataPerson} />
+            ))}
         </div>
         <div>
-          <DataSearch onSearch={this.onSubmitSearchHandler}/>
+          <DataSearch onSearch={this.onSubmitSearchHandler} />
         </div>
       </>
     );
