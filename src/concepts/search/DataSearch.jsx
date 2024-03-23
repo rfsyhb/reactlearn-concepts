@@ -9,9 +9,12 @@ class DataSearch extends React.Component {
   }
 
   onSearchInputChangeHandler = (event) => {
+    // dua buah parameter (mengubah properti, callback)
+    // karena kemungkinan asinkron, lebih baik gunakan callback
+    // memastikan bahwa nilai state yang terbaru dan terupdate.
     this.setState({
       search: event.target.value
-    })
+    }, () => {this.props.onSearch(this.state.search)})
   }
 
   render() {

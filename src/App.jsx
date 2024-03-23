@@ -8,8 +8,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      person: getInitialData()
+      person: getInitialData(),
+      search: ''
     }
+  }
+
+  // untuk mengatur nilai state App yang diambil dari childnya yaitu DataSearch
+  onSubmitSearchHandler = (search) => {
+    this.setState({
+      search
+    });
   }
 
   render() {
@@ -21,7 +29,7 @@ class App extends React.Component {
             .map((data, index) => <ContainerData key={index} {...data} />)}
         </div>
         <div>
-          <DataSearch />
+          <DataSearch onSearch={this.onSubmitSearchHandler}/>
         </div>
       </>
     );
