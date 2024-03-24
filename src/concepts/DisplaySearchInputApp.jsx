@@ -5,7 +5,7 @@ import ContainerData from './destructuring/ContainerData';
 import DataSearch from './search/DataSearch';
 import PersonInputContainer from './input/PersonInputContainer';
 
-class DestructSearchApp extends React.Component {
+class DisplaySearchInputApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -64,4 +64,4 @@ class DestructSearchApp extends React.Component {
   }
 }
 
-export default DestructSearchApp;
+export default DisplaySearchInputApp;
