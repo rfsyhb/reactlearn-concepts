@@ -3,19 +3,22 @@ const data = [
     id: 1,
     name: "John Doe",
     age: 25,
-    email: "johndoe@example.com"
+    email: "johndoe@example.com",
+    skill: "Cook"
   },
   {
     id: 2,
     name: "Jane Smith",
     age: 30,
-    email: "janesmith@example.com"
+    email: "janesmith@example.com",
+    skill: "Sleep"
   },
   {
     id: 3,
     name: "Bob Johnson",
     age: 35,
-    email: "bobjohnson@example.com"
+    email: "bobjohnson@example.com",
+    skill: "Cook"
   }
 ];
 
