@@ -22,12 +22,12 @@ function News({ title, description, image, isFeatured, tags, bookmark, style }) 
 
 // TODO: definisikan propTypes untuk komponen News
 News.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-  isFeatured: PropTypes.bool,
-  tag: PropTypes.array,
-  bookmark: PropTypes.func,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  isFeatured: PropTypes.bool.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  bookmark: PropTypes.func.isRequired,
   style: PropTypes.object
 }
 
