@@ -6,6 +6,8 @@ function SayHello({ name }) {
   return <p>Hello, {name}</p>
 }
 
+// propTypes: nama static property untuk component
+// PropTypes: object yang diimpor dari package prop-types
 SayHello.propTypes = {
   name: PropTypes.string.isRequired
 }
