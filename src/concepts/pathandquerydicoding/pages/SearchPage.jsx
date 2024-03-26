@@ -23,7 +23,8 @@ class SearchPage extends React.Component {
     super(props);
 
     this.state = {
-      foundMovies: []
+      // foundMovies: []
+      foundMovies: props.activeKeyword ? searchMovies(props.activeKeyword) : []
     }
   }
 
