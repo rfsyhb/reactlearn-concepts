@@ -6,6 +6,7 @@ import DrillingApp from './concepts/DrillingApp'
 import ListApp from './concepts/ListApp.jsx'
 import PropTypesApp from './concepts/propTypes/PropTypesApp.jsx'
 import SimpleRoutingApp from './concepts/simplerouting/SimpleRoutingApp.jsx'
+import ReactRouterRoutingApp from './concepts/reactrouterrouting/ReactRouterRoutingApp.jsx'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
     {/* <DrillingApp /> */}
     {/* <ListApp /> */}
     {/* <PropTypesApp /> */}
-    <SimpleRoutingApp />
+    {/* <SimpleRoutingApp /> */}
+    <ReactRouterRoutingApp />
   </React.StrictMode>,
 )
