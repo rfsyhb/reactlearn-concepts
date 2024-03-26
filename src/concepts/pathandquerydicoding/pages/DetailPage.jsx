@@ -1,13 +1,21 @@
 import React from "react";
 import MovieDetail from "../components/MovieDetail";
 import { getMovie } from '../utils/data';
+import { useParams } from "react-router-dom";
 
+// membuat function wrapper karena useParams tidak bisa digunakan di class
+function DetailPageWrapper() {
+  const { id } = useParams();
+
+  // karena seluruh nilai yang diambil dari useParams itu bertipe string
+  return <DetailPage id={Number(id)}/>
+}
 class DetailPage extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      movie: getMovie()
+      movie: getMovie(props.id)
     }
   }
 
@@ -24,4 +32,5 @@ class DetailPage extends React.Component {
   }
 }
 
-export default DetailPage;
+// export default DetailPage;
+export default DetailPageWrapper;

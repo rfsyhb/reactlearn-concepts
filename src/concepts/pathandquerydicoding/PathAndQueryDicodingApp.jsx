@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import NowPlayingPage from './pages/NowPlayingPage';
 import SearchPage from "./pages/SearchPage";
 import UpcomingPage from "./pages/UpcomingPage";
+import DetailPageWrapper from "./pages/DetailPage";
 
 function PathAndQueryDicodingApp() {
   return (
@@ -19,6 +20,7 @@ function PathAndQueryDicodingApp() {
           <Route path='/now-playing' element={<NowPlayingPage />} />
           <Route path='/upcoming' element={<UpcomingPage />} />
           <Route path='/search' element={<SearchPage />} />
+          <Route path='/movies/:id' element={<DetailPageWrapper />} />
         </Routes>
       </main>
     </>
