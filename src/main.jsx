@@ -7,6 +7,8 @@ import ListApp from './concepts/ListApp.jsx'
 import PropTypesApp from './concepts/propTypes/PropTypesApp.jsx'
 import SimpleRoutingApp from './concepts/simplerouting/SimpleRoutingApp.jsx'
 import ReactRouterRoutingApp from './concepts/reactrouterrouting/ReactRouterRoutingApp.jsx'
+import PathAndQueryDicodingApp from './concepts/pathandquerydicoding/PathAndQueryDicodingApp.jsx'
+import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -15,6 +17,10 @@ createRoot(document.getElementById('root')).render(
     {/* <ListApp /> */}
     {/* <PropTypesApp /> */}
     {/* <SimpleRoutingApp /> */}
-    <ReactRouterRoutingApp />
+    {/* <ReactRouterRoutingApp /> */}
+    
+    <BrowserRouter>
+      <PathAndQueryDicodingApp /> 
+    </BrowserRouter>
   </React.StrictMode>,
 )
